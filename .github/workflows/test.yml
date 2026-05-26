@@ -25,7 +25,7 @@ jobs:
           
       - name: Syntax check
         run: |
-          python -m py_compile main.py
+          python -m py_compile cube_camera_frame.py
           
       - name: Check imports (without Isaac Sim)
         run: |
@@ -33,7 +33,7 @@ jobs:
           python -c "
           import sys
           # Проверяем синтаксис без реального импорта Isaac Sim
-          with open('main.py', 'r') as f:
+          with open('cube_camera_frame.py', 'r') as f:
               code = f.read()
           # Простая проверка структуры
           assert 'import numpy' in code
